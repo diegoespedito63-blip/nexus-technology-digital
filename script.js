@@ -17,7 +17,7 @@ nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
 }));
 
 // Link ativo conforme a seção
-const links = document.querySelectorAll('.nav__link');
+const links = document.querySelectorAll('.nav__link[href^="#"]');
 const sections = [...links].map(l => document.querySelector(l.getAttribute('href'))).filter(Boolean);
 const spy = new IntersectionObserver(entries => {
   entries.forEach(e => {
@@ -59,18 +59,6 @@ const countObs = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.6 });
 document.querySelectorAll('[data-count]').forEach(el => countObs.observe(el));
-
-// Filtro do portfólio
-document.querySelectorAll('.filter').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.filter').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const f = btn.dataset.filter;
-    document.querySelectorAll('.project').forEach(p => {
-      p.classList.toggle('hide', f !== 'all' && p.dataset.type !== f);
-    });
-  });
-});
 
 // FAQ (acordeão)
 document.querySelectorAll('.faq__item').forEach(item => {
