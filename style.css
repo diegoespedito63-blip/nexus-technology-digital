@@ -239,6 +239,87 @@ h1, h2, h3 { font-family: 'Outfit', sans-serif; line-height: 1.12; letter-spacin
   color: var(--muted); -webkit-text-fill-color: var(--muted);
 }
 
+/* planos */
+.stat__pre { font-size: .5em; margin-right: 4px; vertical-align: .55em; }
+.nav__link--ext { color: var(--c2); }
+.plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: stretch; }
+.plan {
+  position: relative; display: flex; flex-direction: column;
+  padding: 38px 32px 34px; border-radius: 22px;
+  background: var(--card); border: 1px solid var(--border);
+  transition: transform .3s, border-color .3s;
+}
+.plan:hover { transform: translateY(-6px); border-color: rgba(34, 211, 238, .4); }
+.plan--featured {
+  background:
+    linear-gradient(180deg, #0d1a17, var(--bg-alt)) padding-box,
+    var(--grad) border-box;
+  border: 1.5px solid transparent;
+  box-shadow: 0 30px 80px -30px rgba(34, 229, 122, .45);
+  transform: scale(1.03);
+}
+.plan--featured:hover { transform: scale(1.03) translateY(-6px); }
+.plan__badge {
+  position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+  padding: 6px 16px; border-radius: 999px; white-space: nowrap;
+  background: var(--grad); color: #04110a;
+  font-size: .72rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase;
+}
+.plan__label { font-size: .74rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--c2); }
+.plan__name { font-size: 1.6rem; margin: 10px 0 10px; }
+.plan__desc { color: var(--muted); font-size: .93rem; min-height: 6.4em; }
+.plan__price { margin: 26px 0; padding: 22px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.plan__price small { display: block; color: var(--muted); font-size: .76rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 6px; }
+.plan__price strong {
+  font-family: 'Outfit', sans-serif; font-size: 3rem; font-weight: 900; line-height: 1;
+  background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.plan__price strong span { font-size: 1.3rem; font-weight: 700; vertical-align: .9em; margin-right: 2px; }
+.plan__list { list-style: none; display: grid; gap: 12px; flex: 1; align-content: start; margin-bottom: 30px; }
+.plan__list li { position: relative; padding-left: 30px; font-size: .94rem; }
+.plan__list li::before {
+  content: "✓"; position: absolute; left: 0; top: 1px;
+  width: 20px; height: 20px; border-radius: 50%;
+  display: grid; place-items: center; font-size: .7rem; font-weight: 900;
+  background: rgba(34, 229, 122, .14); color: var(--c1);
+}
+.plan__list b { color: var(--c1); font-weight: 600; }
+.plan__btn { width: 100%; }
+
+.custom {
+  margin-top: 40px; padding: 34px 38px; border-radius: 22px;
+  display: flex; align-items: center; justify-content: space-between; gap: 30px;
+  background:
+    radial-gradient(circle at 0% 50%, rgba(124, 92, 255, .2), transparent 60%),
+    var(--card);
+  border: 1px solid rgba(124, 92, 255, .3);
+}
+.custom h3 { font-size: 1.5rem; margin: 8px 0; }
+.custom p { color: var(--muted); max-width: 640px; }
+
+.included { margin-top: 40px; text-align: center; }
+.included__title { font-size: .78rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; }
+.included__list { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.included__list span {
+  padding: 9px 16px; border-radius: 999px; font-size: .88rem;
+  border: 1px solid var(--border); background: var(--card);
+}
+.plans__portfolio { text-align: center; margin-top: 36px; color: var(--muted); }
+.plans__portfolio a { color: var(--c1); font-weight: 600; }
+.plans__portfolio a:hover { text-decoration: underline; }
+
+@media (max-width: 1000px) {
+  .plans { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; }
+  .plan--featured, .plan--featured:hover { transform: none; }
+  .plan__desc { min-height: 0; }
+  .custom { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 620px) {
+  .plan { padding: 34px 22px 28px; }
+  .custom { padding: 28px 22px; }
+  .custom .btn { width: 100%; }
+}
+
 /* processo */
 .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; position: relative; }
 .steps::before {
