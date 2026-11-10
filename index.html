@@ -22,10 +22,11 @@
 
       <nav class="nav" id="nav">
         <a href="#inicio" class="nav__link active">Início</a>
-        <a href="#servicos" class="nav__link">Serviços</a>
+        <a href="#planos" class="nav__link">Planos</a>
         <a href="#processo" class="nav__link">Processo</a>
-        <a href="#portfolio" class="nav__link">Portfólio</a>
+        <a href="#sobre" class="nav__link">Sobre</a>
         <a href="#faq" class="nav__link">FAQ</a>
+        <a href="https://www-diego-portifolio.vercel.app/#portfolio" target="_blank" rel="noopener" class="nav__link nav__link--ext">Portfólio ↗</a>
         <a href="https://wa.me/5519994194916?text=Ol%C3%A1%20Diego!%20Quero%20um%20site%20profissional." target="_blank" rel="noopener" class="btn btn--grad nav__cta-mobile">Fale comigo</a>
       </nav>
 
@@ -57,11 +58,11 @@
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.3-.5 0-1 .3-3.2-.7-2.7-1.1-4.4-3.9-4.5-4.1-.1-.2-1.1-1.4-1.1-2.7 0-1.3.7-1.9.9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.2 1.2Z"/></svg>
             Solicitar orçamento grátis
           </a>
-          <a href="#portfolio" class="btn btn--ghost btn--lg">Ver projetos</a>
+          <a href="#planos" class="btn btn--ghost btn--lg">Ver planos e valores</a>
         </div>
 
         <div class="stats reveal">
-          <div class="stat"><strong class="grad-text" data-count="9" data-prefix="+">+9</strong><span>Projetos entregues</span></div>
+          <div class="stat"><strong class="grad-text"><small class="stat__pre">R$</small>497</strong><span>Sites a partir de</span></div>
           <div class="stat"><strong class="grad-text" data-count="100" data-suffix="%">100%</strong><span>Responsivo</span></div>
           <div class="stat"><strong class="grad-text">SEO</strong><span>Otimizado p/ Google</span></div>
           <div class="stat"><strong class="grad-text" data-count="100" data-suffix="%">100%</strong><span>Personalizado</span></div>
@@ -103,62 +104,102 @@
       </div>
     </section>
 
-    <!-- ================= SERVIÇOS ================= -->
-    <section class="section section--alt" id="servicos">
+    <!-- ================= PLANOS E VALORES ================= -->
+    <!-- EDITAR: confira os itens de cada plano antes de publicar -->
+    <section class="section section--alt" id="planos">
       <div class="container">
         <div class="section__head reveal">
-          <span class="tag">Soluções digitais</span>
-          <h2 class="section__title">Tipos de sites que <span class="grad-text">eu faço</span></h2>
-          <p class="section__sub">Cada projeto é personalizado de acordo com o seu negócio e o seu objetivo.</p>
+          <span class="tag">Planos &amp; valores</span>
+          <h2 class="section__title">Escolha o site ideal para o <span class="grad-text">seu momento</span></h2>
+          <p class="section__sub">Valores claros, sem surpresa. Escolha o plano e me chame no WhatsApp para começarmos.</p>
         </div>
 
-        <div class="services">
-          <article class="service reveal">
-            <span class="service__num">01</span>
-            <h3>Site Institucional</h3>
-            <p>Para apresentar sua empresa, serviços, história, diferenciais e formas de contato em um só lugar.</p>
-            <ul>
+        <div class="plans">
+          <!-- Plano 1 -->
+          <article class="plan reveal">
+            <span class="plan__label">Para começar</span>
+            <h3 class="plan__name">Landing Page</h3>
+            <p class="plan__desc">Uma página única e direta, ideal para autônomos e para divulgar um serviço, oferta ou evento.</p>
+            <div class="plan__price">
+              <small>a partir de</small>
+              <strong><span>R$</span> 497</strong>
+            </div>
+            <ul class="plan__list">
+              <li>Página única com seções</li>
+              <li>Design exclusivo</li>
+              <li>100% responsivo</li>
+              <li>Botões para o WhatsApp</li>
+              <li>Link para o Instagram</li>
+              <li>SEO básico</li>
+            </ul>
+            <a href="https://wa.me/5519994194916?text=Ol%C3%A1%20Diego!%20Tenho%20interesse%20no%20plano%20Landing%20Page%20(R%24%20497)." target="_blank" rel="noopener" class="btn btn--ghost plan__btn">Quero esse plano</a>
+          </article>
+
+          <!-- Plano 2 (destaque) -->
+          <article class="plan plan--featured reveal">
+            <span class="plan__badge">Mais escolhido</span>
+            <span class="plan__label">Para crescer</span>
+            <h3 class="plan__name">Site Institucional</h3>
+            <p class="plan__desc">O site completo do seu negócio: quem você é, o que oferece, por que escolher você e como entrar em contato.</p>
+            <div class="plan__price">
+              <small>a partir de</small>
+              <strong><span>R$</span> 1.497</strong>
+            </div>
+            <ul class="plan__list">
+              <li><b>Tudo do plano Landing Page</b></li>
               <li>Várias seções / páginas</li>
-              <li>Integração com WhatsApp</li>
-              <li>SEO aplicado</li>
+              <li>Sobre, serviços e galeria</li>
+              <li>Depoimentos e perguntas frequentes</li>
+              <li>Mapa e formulário de contato</li>
+              <li>SEO aplicado para o Google</li>
             </ul>
-            <p class="service__price"><small>a partir de</small> R$ 1.497</p>
+            <a href="https://wa.me/5519994194916?text=Ol%C3%A1%20Diego!%20Tenho%20interesse%20no%20plano%20Site%20Institucional%20(R%24%201.497)." target="_blank" rel="noopener" class="btn btn--grad plan__btn">Quero esse plano</a>
           </article>
-          <article class="service service--featured reveal">
-            <span class="service__badge">Mais pedido</span>
-            <span class="service__num">02</span>
-            <h3>Landing Page</h3>
-            <p>Página única focada em uma oferta, serviço, evento ou campanha — feita para converter.</p>
-            <ul>
-              <li>Foco total em conversão</li>
-              <li>Botões de contato estratégicos</li>
-              <li>Entrega rápida</li>
+
+          <!-- Plano 3 -->
+          <article class="plan reveal">
+            <span class="plan__label">Para vender</span>
+            <h3 class="plan__name">Loja Virtual</h3>
+            <p class="plan__desc">Para vender online: catálogo ou cardápio digital, carrinho e pedidos direto pelo WhatsApp.</p>
+            <div class="plan__price">
+              <small>a partir de</small>
+              <strong><span>R$</span> 2.197</strong>
+            </div>
+            <ul class="plan__list">
+              <li><b>Tudo do Site Institucional</b></li>
+              <li>Catálogo ou cardápio de produtos</li>
+              <li>Carrinho de compras</li>
+              <li>Pedido finalizado no WhatsApp</li>
+              <li>Categorias e busca de produtos</li>
+              <li>Fácil de atualizar</li>
             </ul>
-            <p class="service__price"><small>a partir de</small> R$ 497</p>
-          </article>
-          <article class="service reveal">
-            <span class="service__num">03</span>
-            <h3>Profissionais Autônomos</h3>
-            <p>Para terapeutas, consultores, advogados, nutricionistas, personal trainers e prestadores de serviço.</p>
-            <ul>
-              <li>Apresentação pessoal</li>
-              <li>Agendamento facilitado</li>
-              <li>Depoimentos e FAQ</li>
-            </ul>
-            <p class="service__price"><small>a partir de</small> R$ 497</p>
-          </article>
-          <article class="service reveal">
-            <span class="service__num">04</span>
-            <h3>Negócio Local, Loja & Sistemas</h3>
-            <p>Para clínicas, salões, restaurantes e lojas — com cardápio digital, carrinho ou sistema de gestão.</p>
-            <ul>
-              <li>Cardápio / catálogo online</li>
-              <li>Pedidos pelo WhatsApp</li>
-              <li>Sistemas sob medida</li>
-            </ul>
-            <p class="service__price"><small>loja virtual a partir de</small> R$ 2.197</p>
+            <a href="https://wa.me/5519994194916?text=Ol%C3%A1%20Diego!%20Tenho%20interesse%20no%20plano%20Loja%20Virtual%20(R%24%202.197)." target="_blank" rel="noopener" class="btn btn--ghost plan__btn">Quero esse plano</a>
           </article>
         </div>
+
+        <!-- Sob medida -->
+        <div class="custom reveal">
+          <div class="custom__text">
+            <span class="plan__label">Sob medida</span>
+            <h3>Precisa de um sistema?</h3>
+            <p>Desenvolvo sistemas de gestão personalizados: controle de vendas, estoque, clientes, financeiro e muito mais. Valor sob consulta, de acordo com o que o seu negócio precisa.</p>
+          </div>
+          <a href="https://wa.me/5519994194916?text=Ol%C3%A1%20Diego!%20Quero%20um%20or%C3%A7amento%20de%20sistema%20sob%20medida." target="_blank" rel="noopener" class="btn btn--grad">Pedir orçamento</a>
+        </div>
+
+        <!-- Incluso em todos -->
+        <div class="included reveal">
+          <p class="included__title">Incluso em todos os planos</p>
+          <div class="included__list">
+            <span>✓ Atendimento direto comigo</span>
+            <span>✓ Design exclusivo</span>
+            <span>✓ Funciona no celular, tablet e PC</span>
+            <span>✓ Integração com WhatsApp</span>
+            <span>✓ Suporte após a entrega</span>
+          </div>
+        </div>
+
+        <p class="plans__portfolio reveal">Quer ver sites que eu já fiz? <a href="https://www-diego-portifolio.vercel.app/#portfolio" target="_blank" rel="noopener">Conheça meu portfólio →</a></p>
       </div>
     </section>
 
@@ -192,107 +233,6 @@
             <h3>Entrega</h3>
             <p>Testes, ajustes e, após sua aprovação, o site é publicado e fica pronto para divulgar.</p>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= PORTFÓLIO ================= -->
-    <section class="section section--alt" id="portfolio">
-      <div class="container">
-        <div class="section__head reveal">
-          <span class="tag">Portfólio</span>
-          <h2 class="section__title">Projetos <span class="grad-text">desenvolvidos</span></h2>
-          <p class="section__sub">Clique em um projeto para conhecer o site completo.</p>
-        </div>
-
-        <div class="filters reveal" id="filters">
-          <button class="filter active" data-filter="all">Todos</button>
-          <button class="filter" data-filter="site">Sites</button>
-          <button class="filter" data-filter="sistema">Sistemas</button>
-        </div>
-
-        <div class="projects" id="projects">
-          <a class="project reveal" data-type="site" href="https://didinha123.github.io/claudia-melo-oficial/" target="_blank" rel="noopener">
-            <div class="project__img" style="background-image:url('https://lh3.googleusercontent.com/d/1OZzOiUCWLeU5lq05ws8h8_7B-MO8mOhM')"></div>
-            <div class="project__body">
-              <span class="project__cat">Beleza &amp; Estética</span>
-              <h3>Cláudia Melo Beauty</h3>
-              <p>Divulgação de serviços de beleza com procedimentos, resultados, agendamento online e WhatsApp.</p>
-              <span class="project__link">Ver site completo →</span>
-            </div>
-          </a>
-          <a class="project reveal" data-type="site" href="https://beauty-designer-ten.vercel.app/" target="_blank" rel="noopener">
-            <div class="project__img" style="background-image:url('https://lh3.googleusercontent.com/d/1L8L0hhSXAwsDclQtIKRBd_HdiFX2feTw')"></div>
-            <div class="project__body">
-              <span class="project__cat">Beleza &amp; Estética</span>
-              <h3>Beauty Designer</h3>
-              <p>Espaço de beleza e autocuidado com serviços personalizados e uma experiência única.</p>
-              <span class="project__link">Ver site completo →</span>
-            </div>
-          </a>
-          <a class="project reveal" data-type="sistema" href="https://didinha123.github.io/site-portifolio/#portfolio" target="_blank" rel="noopener">
-            <div class="project__img" style="background-image:url('https://lh3.googleusercontent.com/d/1yB1Zf5uxAMc3XEFMlPYJ54ZlWlDO1w3t')"></div>
-            <div class="project__body">
-              <span class="project__cat">Alimentação · Sistema</span>
-              <h3>Cowboy Business</h3>
-              <p>Gestão comercial com vendas, clientes, fiado, estoque, painel financeiro e metas.</p>
-              <span class="project__link">Ver projeto →</span>
-            </div>
-          </a>
-          <a class="project reveal" data-type="sistema" href="https://didinha123.github.io/site-portifolio/#portfolio" target="_blank" rel="noopener">
-            <div class="project__img" style="background-image:url('https://lh3.googleusercontent.com/d/1yXZabTy27RJWuvKhRsLAnp4uaXJqZlcR')"></div>
-            <div class="project__body">
-              <span class="project__cat">Financeiro · Sistema</span>
-              <h3>CrediGestor</h3>
-              <p>Gestão de crédito e recebimentos com cálculos PRICE e SAC, CET, encargos e usuários.</p>
-              <span class="project__link">Ver projeto →</span>
-            </div>
-          </a>
-          <a class="project reveal" data-type="sistema" href="https://didinha123.github.io/site-portifolio/#portfolio" target="_blank" rel="noopener">
-            <div class="project__img" style="background-image:url('https://lh3.googleusercontent.com/d/1R4rEKiL77-bwgzLqQMYDwW64aWfh7Ey6')"></div>
-            <div class="project__body">
-              <span class="project__cat">Vendas · Sistema</span>
-              <h3>Essencial Modas</h3>
-              <p>Gestão para loja de roupas com PDV, crediário, estoque, financeiro e relatórios.</p>
-              <span class="project__link">Ver projeto →</span>
-            </div>
-          </a>
-          <a class="project reveal" data-type="site" href="https://simon-personal.vercel.app/" target="_blank" rel="noopener">
-            <div class="project__img" style="background-image:url('https://lh3.googleusercontent.com/d/1sBLJhDkAg0WL53K0GKL1PlXTt8k9N4NP')"></div>
-            <div class="project__body">
-              <span class="project__cat">Personal Trainer</span>
-              <h3>Saimon Souza</h3>
-              <p>Treinos presencial e online, calculadora de IMC, avaliações, FAQ e agendamento.</p>
-              <span class="project__link">Ver site completo →</span>
-            </div>
-          </a>
-          <a class="project reveal" data-type="site" href="https://didinha123.github.io/psicanalise/" target="_blank" rel="noopener">
-            <div class="project__img" style="background-image:url('https://lh3.googleusercontent.com/d/1xeN5IzPiNaVuDTXWxatv04nMb4dX3qWs')"></div>
-            <div class="project__body">
-              <span class="project__cat">Saúde &amp; Bem-estar</span>
-              <h3>Psicanálise e Terapia</h3>
-              <p>Apresentação de atendimentos e abordagem terapêutica, facilitando o agendamento de consultas.</p>
-              <span class="project__link">Ver site completo →</span>
-            </div>
-          </a>
-          <a class="project reveal" data-type="site" href="https://didinha123.github.io/cv-sign/" target="_blank" rel="noopener">
-            <div class="project__img" style="background-image:url('https://lh3.googleusercontent.com/d/1Npy4FAH5VOvPt2fqF8Hu_dV2JX6EVrS0')"></div>
-            <div class="project__body">
-              <span class="project__cat">Alimentação &amp; Delivery</span>
-              <h3>TDA Açaí</h3>
-              <p>Cardápio digital com carrinho de compras e finalização de pedidos online.</p>
-              <span class="project__link">Ver site completo →</span>
-            </div>
-          </a>
-          <a class="project reveal" data-type="site" href="https://mimos-maite.vercel.app/" target="_blank" rel="noopener">
-            <div class="project__img" style="background-image:url('https://lh3.googleusercontent.com/d/1rpv7OKme63dj3IuLuH_JS8WkY7IjKrTO')"></div>
-            <div class="project__body">
-              <span class="project__cat">Artesanato &amp; Presentes</span>
-              <h3>Mimos da Maitê</h3>
-              <p>Produtos artesanais e personalizados com portfólio, história da marca e orçamento via WhatsApp.</p>
-              <span class="project__link">Ver site completo →</span>
-            </div>
-          </a>
         </div>
       </div>
     </section>
@@ -417,8 +357,8 @@
         <span class="logo__text">DIEGO<br>SILVA</span>
       </a>
       <div class="footer__links">
-        <a href="#servicos">Serviços</a>
-        <a href="#portfolio">Portfólio</a>
+        <a href="#planos">Planos</a>
+        <a href="https://www-diego-portifolio.vercel.app/#portfolio" target="_blank" rel="noopener">Portfólio</a>
         <a href="#faq">FAQ</a>
         <a href="https://www.instagram.com/diegoessilva/" target="_blank" rel="noopener">Instagram</a>
         <a href="https://wa.me/5519994194916" target="_blank" rel="noopener">WhatsApp</a>
