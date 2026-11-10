@@ -88,7 +88,8 @@ h1, h2, h3 { font-family: 'Outfit', sans-serif; line-height: 1.12; letter-spacin
   background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent;
   filter: drop-shadow(0 0 10px rgba(34, 229, 122, .5));
 }
-.logo__text { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: .92rem; line-height: 1.05; letter-spacing: .14em; }
+.logo__text { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.05rem; line-height: 1.05; letter-spacing: .14em; }
+.logo__text small { font-size: .62em; font-weight: 600; letter-spacing: .3em; color: var(--c2); }
 
 .nav { display: flex; align-items: center; gap: 30px; }
 .nav__link { font-size: .9rem; font-weight: 500; color: var(--muted); position: relative; transition: color .2s; }
