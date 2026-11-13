@@ -136,7 +136,7 @@
               <li>Suporte e pequenas atualizações</li>
               <li>Cancele quando quiser</li>
             </ul>
-            <a href="https://wa.me/5519994194916?text=Ol%C3%A1%20Diego!%20Tenho%20interesse%20no%20plano%20Site%20Mensal%20para%20Landing%20Page%20(R%24%200%20%2B%20R%24%2099%2C99%2Fm%C3%AAs)." target="_blank" rel="noopener" class="btn btn--ghost plan__btn">Quero esse plano</a>
+            <a href="https://wa.me/5519994194916?text=Ol%C3%A1%20Diego!%20Tenho%20interesse%20no%20plano%20Site%20Mensal%20para%20Landing%20Page%20(R%24%200%20%2B%20R%24%2099%2C99%2Fm%C3%AAs)." target="_blank" rel="noopener" class="btn btn--ghost plan__btn" data-plano="mensal" data-nome="Site Mensal" data-valor="R$ 99,99" data-detalhe="1ª mensalidade · criação grátis">Quero esse plano</a>
           </article>
 
           <!-- Plano 1 -->
@@ -157,7 +157,7 @@
               <li>Link para o Instagram</li>
               <li>SEO básico</li>
             </ul>
-            <a href="https://wa.me/5519994194916?text=Ol%C3%A1%20Diego!%20Tenho%20interesse%20no%20plano%20Landing%20Page%20(R%24%20497%20%2B%20R%24%2059%2C99%2Fm%C3%AAs)." target="_blank" rel="noopener" class="btn btn--ghost plan__btn">Quero esse plano</a>
+            <a href="https://wa.me/5519994194916?text=Ol%C3%A1%20Diego!%20Tenho%20interesse%20no%20plano%20Landing%20Page%20(R%24%20497%20%2B%20R%24%2059%2C99%2Fm%C3%AAs)." target="_blank" rel="noopener" class="btn btn--ghost plan__btn" data-plano="landing" data-nome="Landing Page" data-valor="R$ 497,00" data-detalhe="Criação do site · até 12x no cartão">Quero esse plano</a>
           </article>
 
           <!-- Plano 2 (destaque) -->
@@ -179,7 +179,7 @@
               <li>Mapa e formulário de contato</li>
               <li>SEO aplicado para o Google</li>
             </ul>
-            <a href="https://wa.me/5519994194916?text=Ol%C3%A1%20Diego!%20Tenho%20interesse%20no%20plano%20Site%20Institucional%20(R%24%201.497%20%2B%20R%24%2079%2C99%2Fm%C3%AAs)." target="_blank" rel="noopener" class="btn btn--grad plan__btn">Quero esse plano</a>
+            <a href="https://wa.me/5519994194916?text=Ol%C3%A1%20Diego!%20Tenho%20interesse%20no%20plano%20Site%20Institucional%20(R%24%201.497%20%2B%20R%24%2079%2C99%2Fm%C3%AAs)." target="_blank" rel="noopener" class="btn btn--grad plan__btn" data-plano="institucional" data-nome="Site Institucional" data-valor="R$ 1.497,00" data-detalhe="Criação do site · até 12x no cartão">Quero esse plano</a>
           </article>
 
           <!-- Plano 3 -->
@@ -200,7 +200,7 @@
               <li>Categorias e busca de produtos</li>
               <li>Fácil de atualizar</li>
             </ul>
-            <a href="https://wa.me/5519994194916?text=Ol%C3%A1%20Diego!%20Tenho%20interesse%20no%20plano%20Loja%20Virtual%20(R%24%202.197%20%2B%20R%24%2099%2C99%2Fm%C3%AAs)." target="_blank" rel="noopener" class="btn btn--ghost plan__btn">Quero esse plano</a>
+            <a href="https://wa.me/5519994194916?text=Ol%C3%A1%20Diego!%20Tenho%20interesse%20no%20plano%20Loja%20Virtual%20(R%24%202.197%20%2B%20R%24%2099%2C99%2Fm%C3%AAs)." target="_blank" rel="noopener" class="btn btn--ghost plan__btn" data-plano="loja" data-nome="Loja Virtual" data-valor="R$ 2.197,00" data-detalhe="Criação do site · até 12x no cartão">Quero esse plano</a>
           </article>
         </div>
 
@@ -408,6 +408,23 @@
   <a href="https://wa.me/5519994194916?text=Ol%C3%A1%20Diego!%20Vim%20pelo%20site." target="_blank" rel="noopener" class="wa-float" aria-label="Falar no WhatsApp">
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.3-.5 0-1 .3-3.2-.7-2.7-1.1-4.4-3.9-4.5-4.1-.1-.2-1.1-1.4-1.1-2.7 0-1.3.7-1.9.9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.2 1.2Z"/></svg>
   </a>
+
+  <!-- Janela "Quero esse plano": pagar online ou falar no WhatsApp -->
+  <div class="pay-modal" id="payModal" hidden>
+    <div class="pay-modal__box" role="dialog" aria-modal="true" aria-labelledby="payNome">
+      <button class="pay-modal__close" id="payClose" aria-label="Fechar">&times;</button>
+      <span class="tag">Plano escolhido</span>
+      <h3 class="pay-modal__title" id="payNome">Plano</h3>
+      <div class="pay-modal__price">
+        <strong id="payValor">R$ 0</strong>
+        <small id="payDetalhe"></small>
+      </div>
+      <button class="btn btn--grad pay-modal__btn" id="payOnline">Pagar online (Pix ou cartão)</button>
+      <a class="btn btn--ghost pay-modal__btn" id="payWhats" href="#" target="_blank" rel="noopener">Prefiro falar no WhatsApp antes</a>
+      <p class="pay-modal__note">🔒 Pagamento seguro processado pelo Mercado Pago</p>
+      <p class="pay-modal__erro" id="payErro" hidden></p>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
