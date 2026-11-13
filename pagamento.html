@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Pagamento · Nexus Technology</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#06070d;--card:rgba(255,255,255,.035);--border:rgba(255,255,255,.08);--text:#f3f5fa;--muted:#9aa3b8;
+        --c1:#22e57a;--c2:#22d3ee;--c3:#7c5cff;--grad:linear-gradient(100deg,var(--c1) 0%,var(--c2) 55%,var(--c3) 110%)}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{min-height:100vh;background:radial-gradient(900px 500px at 50% -10%,rgba(124,92,255,.18),transparent),var(--bg);
+       color:var(--text);font:16px/1.6 Inter,system-ui,sans-serif;display:flex;align-items:center;justify-content:center;padding:24px 16px}
+  .card{width:100%;max-width:460px;background:var(--card);border:1px solid var(--border);border-radius:22px;padding:38px 28px;text-align:center}
+  .icon{font-size:3rem;line-height:1}
+  h1{font:800 1.8rem Outfit,sans-serif;margin:14px 0 8px}
+  p{color:var(--muted)}
+  .plano{display:inline-block;margin-top:14px;font-size:.85rem;border:1px solid var(--border);border-radius:999px;padding:4px 14px;color:var(--text)}
+  .btn{display:block;width:100%;text-decoration:none;border-radius:14px;padding:15px;font:700 1rem Outfit,sans-serif;margin-top:12px;transition:transform .2s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn--grad{color:#06070d;background:var(--grad)}
+  .btn--ghost{color:var(--text);border:1px solid rgba(124,92,255,.5);background:rgba(124,92,255,.08)}
+  .acoes{margin-top:26px}
+  small.id{display:block;margin-top:10px;font-size:.8rem;color:var(--muted)}
+</style>
+</head>
+<body>
+  <main class="card">
+    <div class="icon" id="icone">⏳</div>
+    <h1 id="titulo">Verificando pagamento…</h1>
+    <p id="texto"></p>
+    <span class="plano" id="plano" hidden></span>
+    <small class="id" id="pid"></small>
+    <div class="acoes">
+      <a class="btn btn--grad" id="whats" href="https://wa.me/5519994194916" target="_blank" rel="noopener">Falar com o Diego no WhatsApp</a>
+      <a class="btn btn--ghost" id="voltar" href="/">Voltar ao site</a>
+    </div>
+  </main>
+
+<script>
+const NOMES = { mensal:'Site Mensal', landing:'Landing Page', institucional:'Site Institucional', loja:'Loja Virtual' };
+const q = new URLSearchParams(location.search);
+const status = q.get('collection_status') || q.get('status');
+const pid = q.get('payment_id') || q.get('collection_id');
+const nome = NOMES[q.get('plano')] || '';
+
+const $ = id => document.getElementById(id);
+if (nome) { $('plano').textContent = 'Plano: ' + nome; $('plano').hidden = false; }
+if (pid && pid !== 'null') $('pid').textContent = 'Nº do pagamento: ' + pid;
+
+function whats(msg){ $('whats').href = 'https://wa.me/5519994194916?text=' + encodeURIComponent(msg); }
+const ref = (nome ? ' do plano ' + nome : '') + (pid && pid !== 'null' ? ' (pagamento nº ' + pid + ')' : '');
+
+if (status === 'approved') {
+  $('icone').textContent = '✅';
+  $('titulo').textContent = 'Pagamento aprovado!';
+  $('texto').textContent = 'Obrigado pela confiança! Me chama no WhatsApp para começarmos o seu site.';
+  $('whats').textContent = 'Começar meu projeto no WhatsApp';
+  whats('Olá Diego! Acabei de fazer o pagamento' + ref + '. Vamos começar meu site?');
+} else if (status === 'pending' || status === 'in_process') {
+  $('icone').textContent = '⏳';
+  $('titulo').textContent = 'Pagamento em análise';
+  $('texto').textContent = 'Assim que o Mercado Pago aprovar, você recebe a confirmação. Se quiser, me avise pelo WhatsApp.';
+  whats('Olá Diego! Fiz o pagamento' + ref + ' e ele está em análise.');
+} else if (status === 'rejected') {
+  $('icone').textContent = '❌';
+  $('titulo').textContent = 'Pagamento recusado';
+  $('texto').textContent = 'Não se preocupe: você pode tentar de novo com outro cartão ou pelo Pix.';
+  $('voltar').textContent = 'Tentar de novo';
+  $('voltar').href = '/#planos';
+  whats('Olá Diego! Tentei pagar' + ref + ' mas o pagamento foi recusado. Pode me ajudar?');
+} else {
+  $('icone').textContent = '↩️';
+  $('titulo').textContent = 'Pagamento não concluído';
+  $('texto').textContent = 'Você pode voltar e escolher o plano de novo quando quiser, ou tirar suas dúvidas comigo.';
+  $('voltar').textContent = 'Ver planos';
+  $('voltar').href = '/#planos';
+  whats('Olá Diego! Tenho interesse' + (nome ? ' no plano ' + nome : ' em um site') + ' e queria tirar algumas dúvidas.');
+}
+</script>
+</body>
+</html>
