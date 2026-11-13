@@ -60,11 +60,18 @@ if (status === 'approved') {
   $('texto').textContent = 'Obrigado pela confiança! Me chama no WhatsApp para começarmos o seu site.';
   $('whats').textContent = 'Começar meu projeto no WhatsApp';
   whats('Olá Diego! Acabei de fazer o pagamento' + ref + '. Vamos começar meu site?');
+} else if ((status === 'pending' || status === 'in_process') && q.get('payment_type') === 'bank_transfer') {
+  // Pix: o código foi gerado, mas o pagamento ainda não caiu
+  $('icone').textContent = '⏳';
+  $('titulo').textContent = 'Aguardando o pagamento do Pix';
+  $('texto').textContent = 'Seu código Pix foi gerado. Assim que você pagar no app do seu banco, o pagamento é confirmado na hora. Depois é só me chamar no WhatsApp para começarmos o seu site!';
+  $('whats').textContent = 'Já paguei, falar no WhatsApp';
+  whats('Olá Diego! Fiz o pagamento via Pix' + ref + '. Vamos começar meu site?');
 } else if (status === 'pending' || status === 'in_process') {
   $('icone').textContent = '⏳';
-  $('titulo').textContent = 'Pagamento em análise';
-  $('texto').textContent = 'Assim que o Mercado Pago aprovar, você recebe a confirmação. Se quiser, me avise pelo WhatsApp.';
-  whats('Olá Diego! Fiz o pagamento' + ref + ' e ele está em análise.');
+  $('titulo').textContent = 'Pagamento em processamento';
+  $('texto').textContent = 'Recebemos o seu pedido e o Mercado Pago está confirmando o pagamento. Isso costuma levar poucos minutos. Se preferir, me chame no WhatsApp.';
+  whats('Olá Diego! Fiz o pagamento' + ref + ' e ele está em processamento.');
 } else if (status === 'rejected') {
   $('icone').textContent = '❌';
   $('titulo').textContent = 'Pagamento recusado';
